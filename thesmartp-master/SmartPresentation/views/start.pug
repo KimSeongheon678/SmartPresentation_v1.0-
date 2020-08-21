@@ -1,0 +1,56 @@
+head
+  title Pug
+  script(type='text/javascript').
+    if (foo) bar(1 + 5)
+  //
+    Industrious by TEMPLATED
+    templated.co @templatedco
+    Released for free under the Creative Commons Attribution 3.0 license (templated.co/license)
+  head
+    title Smart Presentation
+    meta(charset='utf-8')
+    meta(name='viewport' content='width=device-width, initial-scale=1, user-scalable=no')
+    meta(name='description' content='')
+    meta(name='keywords' content='')
+    link(rel='stylesheet' type='text/css' href='/assets/css/main.css')
+  // Header
+  header#header
+    a.logo(href='/') The Smart Presentation
+  // Highlights
+  section.wrapper
+    .inner
+      header.special
+        h2 The Smart Presentation
+        p All New Paradaim for Presentation.
+      .highlights
+        -for(i=0;i<length;i++)
+            section
+                .content
+                    header
+                        a.icon.fa-files-o(href=`/lock/?id=${list[i]}`)
+                            span.label Icon
+                        h3=list[i]
+                    p=`${list[i]} 발표 시작하기`
+  // Footer
+  footer#footer
+    .inner
+      .content
+        section
+          h3 aero &amp; sw capstone
+          p
+            a(href='http://open.gnu.ac.kr/mediawiki/index.php?ti\
+            tle=%EC%A2%85%ED%95%A9%EC%84%A4%EA%B3%84_2020-01') Homepage
+        section
+          h3 developers
+          ul.alt
+            li SeongHeon Kim
+            li Bless God
+            li MinJi Lee
+      .copyright
+        | &copy; GyeongSang National University
+  // Scripts
+  script(src='assets/js/jquery.min.js')
+  script(src='assets/js/browser.min.js')
+  script(src='assets/js/breakpoints.min.js')
+  script(src='assets/js/util.js')
+  script(src='assets/js/main.js')

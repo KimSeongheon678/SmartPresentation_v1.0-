@@ -1,0 +1,120 @@
+<!DOCTYPE HTML>
+        <html>
+            <head>
+                <title>Smart Presentation</title>
+                <meta charset="utf-8" />
+                <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+                <meta name="description" content="" />
+                <meta name="keywords" content="" />
+                <link rel="stylesheet" type="text/css" href="/assets/css/main.css" />
+                <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0/jquery.min.js"></script>
+                <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.js"></script>
+                <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.css" />
+
+            </head>
+
+            <div id="ex" class="modal">
+                <head>
+                    <meta charset="UTF-8">
+                    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+                    <title>Document</title>
+                </head>
+                <body>
+                    <form action="upload" method="post" enctype="multipart/form-data">
+                        <input type='file' name='userfile'>
+                        <input type='submit' value="제출">
+                </body>
+           </div>
+           <script>
+		var para = document.location.href.split("?");
+	   </script>
+            <body class="is-preload">
+        
+                <!-- Header -->
+                    <header id="header">
+                        <a class="logo" href="/">The Smart Presentation</a>
+                    </header>
+        
+                <!-- Nav -->
+                    <nav id="menu">
+                        <ul class="links">
+                          
+                        </ul>
+                    </nav>
+        
+        
+                <!-- Highlights -->
+                    <section class="wrapper">
+                        <div class="inner">
+                            <header class="special">
+                                <h2>The Smart Presentation</h2>
+                                <p>All New Paradaim for Presentation.</p>
+                            </header>
+                            <div class="highlights">
+                                <section>
+                                    <div class="content">
+                                        <header>
+                                            <a href="#" onclick="location.href = 'start.html'" class="icon fa-play-circle"><span class="label">Icon</span></a>
+                                            <h3>발표하기</h3>
+                                        </header>
+                                        <p>PPT를 선택하여 발표를 시작</p>
+                                    </div>
+                                </section>
+                                <section>
+                                    <div class="content">
+                                        <header>
+                                            <a href="#" onclick="location.href = 'delete.html'" class="icon fa-trash-o"><span class="label">Icon</span></a>
+                                            <h3>삭제하기</h3>
+                                        </header>
+                                        <p>삭제하세요</p>
+                                    </div>
+                                </section>
+                                
+                                <section>
+                                    <div class="content">
+                                        <header>
+                                            <a href="#ex" rel="modal:open" class="icon fa-cloud-upload"><span class="label">Icon</span></a>
+                                            <h3>발표자료 업로드</h3>
+                                        </header>
+                                        <p>발표자료를 업로드 하세요</p>
+                                    </div>
+                                </section>
+
+                            </div>
+                        </div>
+                    </section>
+        
+                <!-- Footer -->
+                    <footer id="footer">
+                        <div class="inner">
+                            <div class="content">
+                                <section>
+                                    <h3>aero & sw capstone</h3>
+					<p><a href="http://open.gnu.ac.kr/mediawiki/index.php?title=%EC%A2%85%ED%95%A9%EC%84%A4%EA%B3%84_2020-01">Homepage</a></p>
+                                </section>
+                                <section>
+                                    <h3>developers</h3>
+                                    <ul class="alt">
+					<li>SeongHeon Kim</li>
+					<li>Bless God</li>
+					<li>MinJi Lee</li>
+                                    </ul>
+                                </section>
+                            </div>
+                            <div class="copyright">
+                                &copy; GyeongSang National University
+                            </div>
+                        </div>
+                    </footer>
+        
+                <!-- Scripts -->
+                    <script src="assets/js/jquery.min.js"></script>
+                    <script src="assets/js/browser.min.js"></script>
+                    <script src="assets/js/breakpoints.min.js"></script>
+                    <script src="assets/js/util.js"></script>
+                    <script src="assets/js/main.js"></script>
+
+                    
+        
+            </body>
+        </html>

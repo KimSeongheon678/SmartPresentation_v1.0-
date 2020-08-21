@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+    <title>My Now Amazing Webpage</title>
+    <link rel="stylesheet" type="text/css" href="assets/css/slide.css"/>
+    </head>        
+    <body>  
+        <div class="slidercontainer">  
+            <div class="showSlide fade">  
+                <img src="/user/orbit.pptx/orbit.pptx_1.png" />  
+                <div class="content">Lorem ipsum dolor sit amet</div>  
+            </div>  
+            <div class="showSlide fade">  
+                <img src="/user/orbit.pptx/orbit.pptx_2.png"/>  
+                <div class="content">Lorem ipsum dolor sit amet</div>  
+            </div>  
+      
+            <div class="showSlide fade">  
+                <img src="/user/orbit.pptx/orbit.pptx_3.png"/>  
+                <div class="content">Lorem ipsum dolor sit amet</div>  
+            </div>  
+            <div class="showSlide fade">  
+                <img src="/user/orbit.pptx/orbit.pptx_4.png"/>  
+                <div class="content">Lorem ipsum dolor sit amet</div>  
+            </div>  
+            <!-- Navigation arrows -->  
+            <a class="left" onclick="nextSlide(-1)">❮</a>  
+            <a class="right" onclick="nextSlide(1)">❯</a>  
+        </div>  
+        <script type="text/javascript">  
+            var slide_index = 1;  
+            displaySlides(slide_index);  
+            function nextSlide(n) {  
+                displaySlides(slide_index += n);  
+            }  
+            function currentSlide(n) {  
+                displaySlides(slide_index = n);  
+            }  
+            function displaySlides(n) {  
+                var i;  
+                var slides = document.getElementsByClassName("showSlide");  
+                if (n > slides.length) { slide_index = 1 }  
+                if (n < 1) { slide_index = slides.length }  
+                for (i = 0; i < slides.length; i++) {  
+                    slides[i].style.display = "none";  
+                }  
+                slides[slide_index - 1].style.display = "block";  
+            }  
+    </script>   
+    </body>   
+</html>
