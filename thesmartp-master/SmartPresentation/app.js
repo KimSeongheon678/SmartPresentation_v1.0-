@@ -232,32 +232,37 @@ app.post('/upload', upload.single('userfile'), function(request,response){
      
         fs.writeFileSync(outputPath, done);
         console.log(outputPath)
+
+
+
+        const pdf2pic = new PDF2Pic({
+            density: 100,           // output pixels per inch
+            savename: `${request.file.filename}`,   // output file name
+            savedir: `./png/${request.file.filename}`,    // output file location
+            format: "png",          // output file format
+            size: "600x600"         // output size in pixels
+        });
+
+        pdf2pic.convertBulk(outputPath, -1).then((resolve) => {
+            console.log("image converter successfully!");
+            fs.writeFile(`./png/${request.file.filename}/__data.txt`,'',function(err){
+                if(err){
+                    console.log("failed")
+                }else{
+                
+                    console.log("done")
+                }
+            })
+            response.statusCode = 302;
+            response.setHeader('Location', address);
+            response.end();
+            return resolve;
+        });
+
     });
 
 
-    setTimeout(function(){const pdf2pic = new PDF2Pic({
-        density: 100,           // output pixels per inch
-        savename: `${request.file.filename}`,   // output file name
-        savedir: `./png/${request.file.filename}`,    // output file location
-        format: "png",          // output file format
-        size: "600x600"         // output size in pixels
-      });
-
-    pdf2pic.convertBulk(outputPath, -1).then((resolve) => {
-        console.log("image converter successfully!");
-        fs.writeFile(`./png/${request.file.filename}/__data.txt`,'',function(err){
-            if(err){
-                console.log("failed")
-            }else{
-               
-                console.log("done")
-            }
-        })
-        response.statusCode = 302;
-        response.setHeader('Location', address);
-        response.end();
-        return resolve;
-    });},8000);
+    
 
 }).listen(51112, "127.0.0.1");
 //------------------------------------------------발표자료 업로드-----------------------------------
@@ -629,13 +634,19 @@ app.get('/question',function(request,response){
             display:flex;
             flex-direction: column;
         }
+        #main{
+            display:flex;
+            flex-direction: column;
+        }
         #chat {
-	    height:84%;
+            flex-bias:50%;
+	        
             width: 100%;
             overflow-y: auto;
         }
+
         #btn{
-            flex-bias:20%
+            flex-bias:50%
         }
         .chatting{
             display:flex;
